@@ -1,0 +1,39 @@
+﻿<Window x:Class="Kraujo_Bankas.Pasirinkimas"
+        WindowStartupLocation="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kraujo_Bankas"
+        mc:Ignorable="d"
+        Title="Pasirinkimas" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+            <TextBlock Text="Pasirinkite ką norite daryti" FontSize="20" Margin="0 0 0 0"  Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2" Orientation="Vertical">
+            <Button x:Name="AukotiKrauja" Content="Aukoti Krauja" Margin="0 0 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="AukotiKrauja_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Vertical">
+            <Button x:Name="RezervuotiKrauja" Content="Rezervuoti Krauja" Margin="0 0 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="RezervuotiKrauja_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="6" Orientation="Vertical">
+            <Button x:Name="IeskotiKraujo" Content="Ieškoti Kraujo" Margin="0 0 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="IeskotiKraujo_Click"/>
+        </StackPanel>
+
+
+
+    </Grid>
+</Window>
