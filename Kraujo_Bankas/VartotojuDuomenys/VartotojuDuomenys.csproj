@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Prisijungti.cs" />
-    <Compile Include="RegistracijaDuomenys.cs" />
+    <Compile Include="Registracija.cs" />
     <Compile Include="Saugoti_duomenis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
