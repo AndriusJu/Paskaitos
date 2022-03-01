@@ -28,12 +28,11 @@ namespace Kraujo_Bankas
             kurikraujogrupe.ShowDialog();
         }
 
-        private void Rezervuoti_Toliau_Click(object sender, RoutedEventArgs e)
+         private void Rezervuoti_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(Saugoti_duomenis.RezervuojamasKraujas(Saugoti_duomenis.KraujoGrupe));
+            Saugoti_duomenis.rezervuojamasKraujas();
             Close();
-
-
+            MessageBox.Show("Kraujas rezervuotas");
         }
     }
 }

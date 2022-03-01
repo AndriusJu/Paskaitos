@@ -24,13 +24,10 @@ namespace Kraujo_Bankas
         public Registruotis()
         {
             InitializeComponent();
-            
+
         }
-           
-
-            private void Toliau_Click(object sender, RoutedEventArgs e)
+        private void Toliau_Click(object sender, RoutedEventArgs e)
         {
-
             RegistracijaDuomenys RegistracijosDuomenys = new RegistracijaDuomenys(RegistracijosVardas.Text, RegistracijosSlaptazodis.Text, RegistracijosSlaptazodis2.Text, Vardas.Text, Pavarde.Text, Miestas.Text, Telefononumeris.Text, Elpastas.Text, GimimoData.Text);
 
             if (RegistracijosDuomenys.vardas() != "001")
@@ -46,13 +43,31 @@ namespace Kraujo_Bankas
                 RegistracijosSlaptazodis2.Clear();
             }
 
+            if (RegistracijosDuomenys.Vardui() != "001")
+            {
+                MessageBox.Show(RegistracijosDuomenys.Vardui());
+                Vardas.Clear();
+            }
+
+            if (RegistracijosDuomenys.pavarde() != "001")
+            {
+                MessageBox.Show(RegistracijosDuomenys.pavarde());
+                Pavarde.Clear();
+            }
+
+            if (RegistracijosDuomenys.miestas() != "001")
+            {
+                MessageBox.Show(RegistracijosDuomenys.miestas());
+                Miestas.Clear();
+            }
+            
+
             if (RegistracijosDuomenys.telefononumeris() != "001")
             {
                 MessageBox.Show(RegistracijosDuomenys.telefononumeris());
                 Telefononumeris.Clear();
             }
 
-            
             if (RegistracijosDuomenys.elpastas() != "001")
             {
                 MessageBox.Show(RegistracijosDuomenys.elpastas());
@@ -65,34 +80,39 @@ namespace Kraujo_Bankas
                 GimimoData.Clear();
             }
 
+            if (Vyras.IsChecked == true)
+            {
+                RegistracijosDuomenys.Lytis = "Vyras";
+            }
+            else if (Moteris.IsChecked == true)
+            {
+                RegistracijosDuomenys.Lytis = "Moteris";
+            }
+            else
+            {
+                MessageBox.Show("Pasirinkite vyras ar moteris");
+            }
 
-
-               
-             if (Vyras.IsChecked == true)
-             {
-             RegistracijosDuomenys.Lytis = "Vyras";
-             }
-             else if (Moteris.IsChecked == true)
-             {
-             RegistracijosDuomenys.Lytis = "Moteris";
-             }
-             else
-             {
-             MessageBox.Show("Pasirinkite vyras ar moteris");
-             }
-                 
-             
-
-
-
-
-             RegistracijosDuomenys.Registruotis();
- 
-            // pataisyti kad atidarytu tik jei viskas good
-             Pasirinkimas pasirinkimas = new Pasirinkimas();
-             pasirinkimas.Show();
-             Close();
+          // KuriKraujoGrupe kurikraujogrupe = new KuriKraujoGrupe();
+          // kurikraujogrupe.ShowDialog();
+          //
+          // if (RegistracijosDuomenys.Registruotis() != "001")
+          // {
+          //     MessageBox.Show(RegistracijosDuomenys.Registruotis());
+          //     
+          // }
+          // else
+          // {
+                Pasirinkimas pasirinkimas = new Pasirinkimas();
+                pasirinkimas.Show();
+                Close();
+         //   }
         }
+
+        private void RegistracijosSlaptazodis_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
         }
-      
     }
+}    
+  

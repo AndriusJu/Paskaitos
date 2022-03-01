@@ -29,38 +29,38 @@ namespace Kraujo_Bankas
 
         private void KuriKraujo_Click(object sender, RoutedEventArgs e)
         {
-                string Grupe = null;
-                string Rezus = null;
+        string Grupe = null;
+        string Rezus = null;
 
-                if (O.IsChecked == true)
-                {
-                    Grupe = "O";
-                }
-                else if (A.IsChecked == true)
-                {
-                    Grupe = "A";
-                }
-                else if (B.IsChecked == true)
-                {
-                    Grupe = "B";
-                }
-                else if (AB.IsChecked == true)
-                {
-                    Grupe = "AB";
-                }
+        if (O.IsChecked == true)
+        {
+            Grupe = "O";
+        }
+        else if (A.IsChecked == true)
+        {
+            Grupe = "A";
+        }
+        else if (B.IsChecked == true)
+        {
+            Grupe = "B";
+        }
+        else if (AB.IsChecked == true)
+        {
+            Grupe = "AB";
+        }
 
-                if (Teigiama.IsChecked == true)
-                {
-                    Rezus = "+";
-                }
-                else if (Neigiama.IsChecked == true)
-                {
-                    Rezus = "-";
-                }
-                string KraujoGrupe = Grupe + Rezus;
+        if (Teigiama.IsChecked == true)
+        {
+            Rezus = "+";
+        }
+        else if (Neigiama.IsChecked == true)
+        {
+            Rezus = "-";
+        }
+        string KraujoGrupe = Grupe + Rezus;
 
-             Saugoti_duomenis.kraujogrupe(KraujoGrupe);
-            Close();
+        Saugoti_duomenis.kraujogrupe(KraujoGrupe);
+        Close();
 
 
         }

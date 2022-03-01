@@ -8,32 +8,9 @@
         mc:Ignorable="d"
         Title="Pasirinkimas" Height="450" Width="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-        </Grid.RowDefinitions>
-        <StackPanel Grid.Row="1" Orientation="Vertical">
-            <TextBlock Text="Pasirinkite ką norite daryti" FontSize="20" Margin="0 0 0 0"  Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        </StackPanel>
-        
-        <StackPanel Grid.Row="2" Orientation="Vertical">
-            <Button x:Name="AukotiKrauja" Content="Aukoti Krauja" Margin="0 0 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="AukotiKrauja_Click"/>
-        </StackPanel>
-        <StackPanel Grid.Row="4" Orientation="Vertical">
+            <TextBlock Text="Pasirinkite ką norite daryti" FontSize="20" Margin="0 -300 0 0"  Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Button x:Name="AukotiKrauja" Content="Aukoti Krauja" Margin="0 -200 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="AukotiKrauja_Click"/>
             <Button x:Name="RezervuotiKrauja" Content="Rezervuoti Krauja" Margin="0 0 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="RezervuotiKrauja_Click"/>
-        </StackPanel>
-        <StackPanel Grid.Row="6" Orientation="Vertical">
-            <Button x:Name="IeskotiKraujo" Content="Ieškoti Kraujo" Margin="0 0 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="IeskotiKraujo_Click"/>
-        </StackPanel>
-
-
-
-    </Grid>
+            <Button x:Name="IeskotiKraujo" Content="Ieškoti Kraujo" Margin="0 200 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="IeskotiKraujo_Click"/>
+     </Grid>
 </Window>

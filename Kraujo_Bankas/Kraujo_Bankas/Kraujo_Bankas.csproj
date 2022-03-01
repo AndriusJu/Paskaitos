@@ -144,9 +144,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\VartotojuDuomenys\VartotojuDuomenys.csproj">
+    <ProjectReference Include="..\VartotojuDuomenys\Duomenys_library.csproj">
       <Project>{5d0cd827-f339-4549-a953-86b905ebbfd6}</Project>
-      <Name>VartotojuDuomenys</Name>
+      <Name>Duomenys_library</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

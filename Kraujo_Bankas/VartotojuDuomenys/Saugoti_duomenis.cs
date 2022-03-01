@@ -14,12 +14,22 @@ namespace VartotojuDuomenys
 
         public static string PaaukotasKraujas = @"..\..\..\PaaukotasKraujas.txt";
 
+        public static string rezervuojamaskraujas = @"..\..\..\RezervuojuKrauja.txt";
+
         public static void VartotojuDuomenysFailas(string paaukotaskraujas)
         {
             PaaukotasKraujas = paaukotaskraujas;
 
             bool ArYraFailas = File.Exists(paaukotaskraujas);
             if (!ArYraFailas) { File.Create(paaukotaskraujas); };
+
+        }
+        public static void RezervuojuKrauja(string rezervuojamaskraujas)
+        {
+            PaaukotasKraujas = rezervuojamaskraujas;
+
+            bool ArYraFailas = File.Exists(rezervuojamaskraujas);
+            if (!ArYraFailas) { File.Create(rezervuojamaskraujas); };
 
         }
         public static void kraujogrupe(string kraujas)
@@ -29,7 +39,7 @@ namespace VartotojuDuomenys
         public static void PaukotasKraujas()
         {
             VartotojuDuomenysFailas(PaaukotasKraujas);
-            File.AppendAllText(PaaukotasKraujas, Prisijungti.Name + "," + KraujoGrupe + " ");
+            File.AppendAllText(PaaukotasKraujas, Prisijungti.Name + RegistracijaDuomenys.NameRegistracija + "," + KraujoGrupe + " ");
         }
 
         public static string IeskomasKraujas(string kraujas)
@@ -39,7 +49,7 @@ namespace VartotojuDuomenys
             List<string> Kraujas = new List<string>();
             foreach (string item in File.ReadLines(PaaukotasKraujas))
             {
-                foreach (var kit in item.Split())
+                foreach (var kit in item.Split(','))
                 {
                     if (kit.Split().Contains(kraujas))
                     {
@@ -48,28 +58,36 @@ namespace VartotojuDuomenys
                     }
                 }
             }
-            foreach (var item in Kraujas)
-            {
-                Console.WriteLine(item);
-            }
             if (turim > 0)
             {
                 return "Šios kraujo grupės turime: " + Convert.ToString(turim);
             }
             else
             {
-                return "Šios kraujo grupės neturime";
-                // Pratest kad ismestu visus kurie turi ta grupe, gal pagal miesta grupuojant
+               
+                foreach (var item in File.ReadLines(RegistracijaDuomenys.DonoruFailas))
+                {
+                    string[] tekstodalis = item.Split(' ');
+                    foreach (string tekstas in tekstodalis)
+                    {
+                        string[] duomenys = tekstas.Split(',');
+                        if (duomenys[8] == kraujas)
+                        {
+                            return $"Šios grupės neturime, bet jos turi: \n {duomenys[0]} {duomenys[2]} {duomenys[3]} {duomenys[4]} {duomenys[5]} {duomenys[6]}";
+                        }
+                        
+                    }
+
+                }
+               return "Šios kraujo grupės neturime.";
             }
         }
-        public static string RezervuojamasKraujas(string kraujas)
+
+       
+        public static void rezervuojamasKraujas()
         {
-            VartotojuDuomenysFailas(PaaukotasKraujas);
-            
-                //kol kas nezinau ka daro
-            
-            string atsakykmas = null;
-            return atsakykmas;
+            File.AppendAllText(rezervuojamaskraujas, KraujoGrupe + " ");
+
         }
     }
 }

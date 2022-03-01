@@ -8,7 +8,6 @@
         mc:Ignorable="d"
         Title="AukotiKrauja" Height="450" Width="800">
     <Grid>
-        <Button x:Name="Aukoti" Content="Aukoti" Width="200" Height="50" Margin="0 0 0 0" HorizontalAlignment="Center"
- VerticalAlignment="Center" Click="Aukoti_Click"/>
+        <Button x:Name="Aukoti" Content="Aukoti" Width="200" Height="50" Margin="0 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Aukoti_Click"/>
     </Grid>
 </Window>

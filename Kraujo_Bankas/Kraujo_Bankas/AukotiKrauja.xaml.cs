@@ -21,15 +21,12 @@ namespace Kraujo_Bankas
     /// </summary>
     public partial class AukotiKrauja : Window
     {
-       
-       
-        public AukotiKrauja()
+       public AukotiKrauja()
         {
             InitializeComponent();
             KuriKraujoGrupe kurikraujogrupe = new KuriKraujoGrupe();
             kurikraujogrupe.ShowDialog();
         }
-
         private void Aukoti_Click(object sender, RoutedEventArgs e)
         {
             Saugoti_duomenis.PaukotasKraujas();

@@ -10,9 +10,9 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100" />
-            <RowDefinition Height="100" />
-            <RowDefinition Height="50"/>
-        </Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="80" />
+         </Grid.RowDefinitions>
         <GroupBox Grid.Row="0" >
             <StackPanel Orientation="Vertical" >
                 <Label Content="Pasirinkite kraujo grupe" />
@@ -29,8 +29,8 @@
                 <RadioButton x:Name="Neigiama" Content="-" />
             </StackPanel>
         </GroupBox>
-        <StackPanel Grid.Row="4" Margin="0 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Left">
-            <Button x:Name="Toliau" Content="Toliau"  Width="100" Height="30" Click="KuriKraujo_Click" />
+        <StackPanel Grid.Row="3" > 
+        <Button x:Name="Toliau" Content="Toliau" Margin="0 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="100" Height="30" Click="KuriKraujo_Click" />
         </StackPanel>
     </Grid>
 </Window>

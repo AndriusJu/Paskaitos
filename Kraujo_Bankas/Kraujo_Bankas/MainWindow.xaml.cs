@@ -29,8 +29,6 @@ namespace Kraujo_Bankas
 
         private void Pasirinkimas_Prisijungti_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow Pagrindinis = new MainWindow();
-            Pagrindinis.Close();
             Prisijungimas Jungtis = new Prisijungimas();
             Jungtis.Show();
             Close();
@@ -39,8 +37,7 @@ namespace Kraujo_Bankas
 
         private void Registruotis_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow Pagrindinis = new MainWindow();
-            Pagrindinis.Close();
+            
             Registruotis Registruotis = new Registruotis();
             Registruotis.Show();
             Close();

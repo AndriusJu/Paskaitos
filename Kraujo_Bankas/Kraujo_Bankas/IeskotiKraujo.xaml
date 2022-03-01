@@ -8,6 +8,6 @@
         mc:Ignorable="d"
         Title="IeskotiKraujo" Height="450" Width="800">
     <Grid>
-        <Button x:Name="Toliau" Content="Toliau" Width="200" Margin="0 0 0 0" Height="50" FontSize="20" Click="Ieskoti_Toliau_Click" />
+        <Button x:Name="Toliau" Content="Ieškoti" Width="200" Margin="0 0 0 0" Height="50" FontSize="20" Click="Ieskoti_Toliau_Click" />
     </Grid>
 </Window>

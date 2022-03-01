@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kraujo_Bankas", "Kraujo_Bankas\Kraujo_Bankas.csproj", "{C8AECF28-A06C-4165-AB5B-AFAF7437C3FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VartotojuDuomenys", "VartotojuDuomenys\VartotojuDuomenys.csproj", "{5D0CD827-F339-4549-A953-86B905EBBFD6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duomenys_library", "VartotojuDuomenys\Duomenys_library.csproj", "{5D0CD827-F339-4549-A953-86B905EBBFD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
