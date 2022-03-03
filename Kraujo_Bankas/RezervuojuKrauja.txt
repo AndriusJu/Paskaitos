@@ -1,1 +1,1 @@
-A+ B+ AB- A- 
+A+ B+ AB- A- B+ 

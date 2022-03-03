@@ -59,6 +59,10 @@ namespace Duomenys_Library
             {
                 return "Toks Registracijos vardas jau yra";
             }
+            else if (!Regex.IsMatch(Vardas, @"^[a-zA-Z0-9]"))
+            {
+                return "Registracijos vardui naudojam tik raides ir skaicius !";
+            }
             else if (NameRegistracija.Length < 6)
             {
                 return "Prisijungimo vardas pertrumpas";
@@ -77,6 +81,10 @@ namespace Duomenys_Library
             else if (PasswordRegistracija != PasswordRegistracija2)
             {
                 return "Įvesti slaptazodziai nesutampa";
+            }
+            else if (!Regex.IsMatch(Vardas, @"^[a-zA-Z0-9]"))
+            {
+                return "slaptazodziui naudojam tik raides ir skaicius !";
             }
             else if (PasswordRegistracija.Length < 6)
             {
@@ -181,21 +189,13 @@ namespace Duomenys_Library
                     Convert.ToInt32(item);
                 }
 
-                 if (GimimoData.Length < 10 || GimimoData.Length > 10)
+                 if (GimimoData.Length < 10 || GimimoData.Length > 10) // veikia tik metai.
                 {
                     return "Suklydote gimimo datą pvz 1999-12-01. Bandykit dar kartą";
                 }
-                else if (data[0].Length != 4 && Convert.ToInt32(data[0]) < 1900)
+                else if (data[0].Length != 4 && Convert.ToInt32(data[0]) < 1900 && data[1].Length != 2 && Convert.ToInt32(data[1]) < 1 && Convert.ToInt32(data[1]) < 12 && data[2].Length != 2 && Convert.ToInt32(data[2]) < 1 && Convert.ToInt32(data[1]) < 31)
                 {
                     return "Jūs blogai įvedėte metus, datos pvz. 1999-12-01";
-                }
-                else if (data[1].Length != 2 && Convert.ToInt32(data[1]) < 0 &&  Convert.ToInt32(data[1]) > 13)
-                {
-                    return "Jūs blogai įvedėte mėnesį, datos pvz. 1999-12-01";
-                }
-                else if (data[2].Length != 2 && Convert.ToInt32(data[2]) < 0 && Convert.ToInt32(data[1]) > 32)
-                {
-                    return "Jūs blogai įvedėte diena, datos pvz. 1999-12-01";
                 }
                 else
                 {
@@ -204,7 +204,7 @@ namespace Duomenys_Library
             }
             catch (Exception)
             {
-                return "Klaida, datoje ne vien skaičiai";
+                return "Klaida, datoje ne vien skaičiai arba langelis tuščias";
             }
         }
         public static void Registracija()

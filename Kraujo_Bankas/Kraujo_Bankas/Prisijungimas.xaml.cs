@@ -38,7 +38,7 @@ namespace Kraujo_Bankas
             {
                 Pasirinkimas pasirinkimas = new Pasirinkimas();
                 pasirinkimas.Show();
-                Close();
+                //Close();
             }
         }
     }   
