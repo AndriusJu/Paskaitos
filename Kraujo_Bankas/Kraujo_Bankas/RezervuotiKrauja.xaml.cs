@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Duomenys_Library;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using VartotojuDuomenys;
 
 namespace Kraujo_Bankas
 {
@@ -27,12 +15,10 @@ namespace Kraujo_Bankas
             KuriKraujoGrupe kurikraujogrupe = new KuriKraujoGrupe();
             kurikraujogrupe.ShowDialog();
         }
-
-         private void Rezervuoti_Click(object sender, RoutedEventArgs e)
+        private void Rezervuoti_Click(object sender, RoutedEventArgs e)
         {
-            Saugoti_duomenis.rezervuojamasKraujas();
             Close();
-            MessageBox.Show("Kraujas rezervuotas");
+            MessageBox.Show($"Kraujas rezervuotas !  \n Šiuo metu jau rezervuota: {Saugoti_duomenis.rezervuojamasKraujas()}");
         }
     }
 }

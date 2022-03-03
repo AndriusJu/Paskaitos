@@ -6,13 +6,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kraujo_Bankas"
         mc:Ignorable="d"
-        Title="Prisijungimas" Height="450" Width="800">
+        Title="Prisijungimas" Height="450" Width="800" Background="Red">
     <Grid>
-
-        <TextBlock Text="Prisijungimo Vardas" FontSize="15"  Width="200" Height="30"  Margin="0 -260 0 0" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
-        <TextBox x:Name="Vardas"  Margin="0 -200 0 0" Width="200" Height="30"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
-        <TextBlock Text="Prisijungimo Slaptažodis"  Margin="0 -100 0 0" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="15"/>
-        <PasswordBox x:Name="Spaltazodis" Margin="0 -40 0 0" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" />
-        <Button x:Name="Prisijungti" FontSize="15" Content="Prisijungti" Margin="0 100 0 0" Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Prisijungti_Click"/>
+        <TextBlock Text="Prisijungimo Vardas"  FontSize="20"  Width="200" Height="30"  Margin="0 -260 0 0" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap" Foreground="White" />
+        <TextBox x:Name="Vardas" TextAlignment="Left"  Margin="0 -200 0 0" Width="200" Height="30"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" BorderBrush="Black"/>
+        <TextBlock Text="Prisijungimo Slaptažodis"  Margin="0 -100 0 0" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="18" Foreground="White" />
+        <PasswordBox x:Name="Spaltazodis" Margin="0 -40 0 0" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"  BorderBrush="Black"/>
+        <Button x:Name="Prisijungti" FontSize="15" Content="Prisijungti" Margin="0 100 0 0" Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Prisijungti_Click" BorderBrush="Black" Background="White" Foreground="Red"  FontWeight="Bold"/>
      </Grid>
 </Window>

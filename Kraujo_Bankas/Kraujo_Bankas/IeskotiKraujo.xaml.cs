@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using VartotojuDuomenys;
+using Duomenys_Library;
 
 namespace Kraujo_Bankas
 {
@@ -20,21 +20,16 @@ namespace Kraujo_Bankas
     /// </summary>
     public partial class IeskotiKraujo : Window
     {
-       
         public IeskotiKraujo()
         {
             InitializeComponent();
             KuriKraujoGrupe kurikraujogrupe = new KuriKraujoGrupe();
             kurikraujogrupe.ShowDialog();
-           
         }
         private void Ieskoti_Toliau_Click(object sender, RoutedEventArgs e)
         {
-
             MessageBox.Show(Saugoti_duomenis.IeskomasKraujas(Saugoti_duomenis.KraujoGrupe)); 
             Close();
-
         }
-
     }
 }

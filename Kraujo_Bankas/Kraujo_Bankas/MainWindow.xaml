@@ -7,13 +7,10 @@
         xmlns:local="clr-namespace:Kraujo_Bankas"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-        
+    
     <Grid>
-        <TextBlock Text="Sveiki atvyke į Kraujo banka" FontSize="20" Margin="0 -200 0 0"  Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                
-            <Button x:Name="Prisijungti" Content="Prisijungti" FontSize="15" Margin=" 0 0 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Pasirinkimas_Prisijungti_Click"/>
-      
-            <Button x:Name="Registruotis" Content="Registruotis" FontSize="15" Margin="0 200 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Registruotis_Click"/>
-        
+     <Image Margin="0 0 0 0 " HorizontalAlignment="Center" Visibility="Visible"  Source="C:\Users\Meile\source\Paskaitos\Kraujo_Bankas\Bankas.png" Stretch="UniformToFill"/>
+     <Button x:Name="Jungtis" Content="Prisijungti" FontSize="30" Margin=" -350 -250 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Pasirinkimas_Prisijungti_Click" Background="Red" Foreground="White"/>
+     <Button x:Name="Registruotis" Content="Registruotis" FontSize="30" Margin="350 -250 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Registruotis_Click" Background="Red" Foreground="White"/>
     </Grid>
 </Window>

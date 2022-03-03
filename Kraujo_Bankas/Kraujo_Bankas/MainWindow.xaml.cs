@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using VartotojuDuomenys;
+using Duomenys_Library;
 
 namespace Kraujo_Bankas
 {
@@ -24,25 +24,22 @@ namespace Kraujo_Bankas
         public MainWindow()
         {
             InitializeComponent();
-           
+            NuskaitytiDuomenisIsFailo.VartotojuDuomenysFailas();
+            NuskaitytiDuomenisIsFailo.DonoruDuomenysFailas();
+            NuskaitytiDuomenisIsFailo.PaaukotasKraujasFailas();
+            NuskaitytiDuomenisIsFailo.RezervuojuKraujaFailas();
         }
-
         private void Pasirinkimas_Prisijungti_Click(object sender, RoutedEventArgs e)
         {
             Prisijungimas Jungtis = new Prisijungimas();
             Jungtis.Show();
             Close();
-
         }
-
         private void Registruotis_Click(object sender, RoutedEventArgs e)
         {
-            
             Registruotis Registruotis = new Registruotis();
             Registruotis.Show();
             Close();
-
         }
-        
     }
 }

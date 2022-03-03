@@ -6,79 +6,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kraujo_Bankas"
         mc:Ignorable="d"
-        Title="Registracija" Height="450" Width="800">
+        Title="Registracija" Height="450" Width="800" Background="White">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="30"/>
-
+            <RowDefinition Height="345"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        
-        <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <TextBlock Text="Įveskite vartotojo varda:" Width="150" VerticalAlignment="Center"/>
-            <TextBox x:Name="RegistracijosVardas" Width="200" VerticalAlignment="Center" FontSize="15"/>
-        </StackPanel>
-        
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <TextBlock Text="Įveskite slaptažodį:" Width="150" VerticalAlignment="Center" />
-            <TextBox x:Name="RegistracijosSlaptazodis" Width="200"  VerticalAlignment="Center" FontSize="15"  TextChanged="RegistracijosSlaptazodis_TextChanged"/>
-        </StackPanel>
-        
-        <StackPanel Grid.Row="2" Orientation="Horizontal">
-            <TextBlock Text="Pakartokite slaptažodį:" Width="150" VerticalAlignment="Center" />
-            <TextBox x:Name="RegistracijosSlaptazodis2" Width="200" VerticalAlignment="Center" FontSize="15"/>
-        </StackPanel>
-        
-        <StackPanel Grid.Row="3" Orientation="Horizontal">
-            <TextBlock Text="Įveskite savo varda:" Width="150" VerticalAlignment="Center" />
-            <TextBox x:Name="Vardas" Width="200"  VerticalAlignment="Center" FontSize="15"/>
-        </StackPanel>
-        
-        <StackPanel Grid.Row="4" Orientation="Horizontal">
-            <TextBlock Text="Įveskite savo pavarde:" Width="150" VerticalAlignment="Center"/>
-            <TextBox x:Name="Pavarde" Width="200"  VerticalAlignment="Center" FontSize="15"/>
-        </StackPanel>
-        
-        <StackPanel Grid.Row="5" Orientation="Horizontal">
-            <TextBlock Text="Įveskite savo miesta:" Width="150" VerticalAlignment="Center" />
-            <TextBox x:Name="Miestas" Width="200" VerticalAlignment="Center" FontSize="15"/>
-        </StackPanel>
-        
-        <StackPanel Grid.Row="6" Orientation="Horizontal">
-            <TextBlock Text="Įveskite telefono numeris:" Width="150" VerticalAlignment="Center" />
-            <TextBox x:Name="Telefononumeris" Width="200" VerticalAlignment="Center" FontSize="15"/>
-        </StackPanel>
-        
-        <StackPanel Grid.Row="7" Orientation="Horizontal">
-            <TextBlock Text="Įveskite El.Pašto adresa:" Width="150" VerticalAlignment="Center" />
-            <TextBox x:Name="Elpastas" Width="200" VerticalAlignment="Center" FontSize="15"/>
-        </StackPanel>
-        
-        <StackPanel Grid.Row="8" Orientation="Horizontal">
-            <TextBlock Text="Įveskite Gimimo data:" Width="150" VerticalAlignment="Center" />
-            <TextBox x:Name="GimimoData" Width="200" VerticalAlignment="Center" FontSize="15"/>
+        <Image  Margin="0 0 0 0"  Source="C:\Users\Meile\source\Paskaitos\Kraujo_Bankas\Registracija.jpg"/>
+        <StackPanel Grid.Row="0"  Orientation="Vertical" HorizontalAlignment="Left" x:Name="Laukeliai">
+            <TextBlock Text="Įveskite vartotojo varda:" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBox x:Name="RegistracijosVardas" TextAlignment="Center" Width="200" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+
+            <TextBlock Text="Įveskite slaptažodį:" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBox x:Name="RegistracijosSlaptazodis" TextAlignment="Center" Width="200"  VerticalAlignment="Center" FontSize="15"/>
+
+            <TextBlock Text="Pakartokite slaptažodį:"  VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBox x:Name="RegistracijosSlaptazodis2" TextAlignment="Center" Width="200" VerticalAlignment="Center" FontSize="15" TextChanged="RegistracijosSlaptazodis2_TextChanged"/>
+
+            <TextBlock Text="Įveskite savo varda:" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBox x:Name="Vardas" Width="200" TextAlignment="Center"  VerticalAlignment="Center" FontSize="15"/>
+
+            <TextBlock Text="Įveskite savo pavarde:" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBox x:Name="Pavarde" Width="200" TextAlignment="Center"  VerticalAlignment="Center" FontSize="15"/>
+
+            <TextBlock Text="Įveskite savo miesta:"  VerticalAlignment="Center" HorizontalAlignment="Center"  />
+            <TextBox x:Name="Miestas" Width="200" TextAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+
+            <TextBlock Text="Įveskite telefono numeris:" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+            <TextBox x:Name="Telefononumeris" TextAlignment="Center" Width="200" VerticalAlignment="Center" FontSize="15"/>
+
+            <TextBlock Text="Įveskite El.Pašto adresa:" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+            <TextBox x:Name="Elpastas" Width="200" TextAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+
+            <TextBlock Text="Įveskite Gimimo data:"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBox x:Name="GimimoData" Width="200" TextAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
             </StackPanel>
 
-        <GroupBox Grid.Row="9" >
-        <StackPanel Orientation="Horizontal">
+        <GroupBox Grid.Row="1" >
+            <StackPanel Orientation="Horizontal" x:Name="Lyties_Laukelis">
                 <TextBlock Text="Pasirinkite lytį:" Width="100"  VerticalAlignment="Center"/>
                 <RadioButton x:Name="Vyras" Content="Vyras" VerticalAlignment="Center" Width="100"/>
                 <RadioButton x:Name="Moteris" Content="Moteris" VerticalAlignment="Center" Width="100"/>
             </StackPanel>
         </GroupBox>
         
-        <StackPanel Grid.Row="10" Orientation="Horizontal">
-            <Button x:Name="Toliau" Content="Toliau" Width="200" Click="Toliau_Click"/>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button x:Name="Toliau" Content="Toliau" Width="200" Click="Toliau_Click" BorderBrush="Black" Background="White" Foreground="Red"  FontWeight="Bold"/>
         </StackPanel>
-
     </Grid>
 </Window>

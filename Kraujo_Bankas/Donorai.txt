@@ -1,1 +1,1 @@
-Andrius,Andrius5,Jurkevicius,Kaunas,868617463,Andrius@gmail.com,1994-12-30,Vyras,AB+ Andrius,Jokubas,Jokubauskas,Sakiai,861752145,Jokubas@gmail.com,1852-12-30,Vyras,B+ Andrius,Jonas,Jokubukas,Griske,861786463,griske@gmail.com,1872-12-30,Vyras,A+ 
+Petras,Petras,Jonaitis,Joniskis,555555555,Jonaitis@vienas.com,1888-10-13,Vyras,O- Andrius,Andrius,Jurkevicius,Sakiai,868617462,Andrius@gmail.com,1994-12-30,Vyras,AB+ Boruzele,Gyte,Jurkeviciene,Kaunas,852145687,Gyte@brumbrum.com,1995-08-31,A+ 

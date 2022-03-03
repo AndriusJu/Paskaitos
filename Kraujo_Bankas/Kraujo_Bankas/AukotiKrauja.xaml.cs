@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using VartotojuDuomenys;
+using Duomenys_Library;
 
 namespace Kraujo_Bankas
 {
@@ -32,7 +32,6 @@ namespace Kraujo_Bankas
             Saugoti_duomenis.PaukotasKraujas();
             Close();
             MessageBox.Show("Ačiū už jūsų auką.");
-            // Neiraso kokios grupes nes neaisku kuri grupe prisijungiant....
         }
     }
 }

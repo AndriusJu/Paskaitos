@@ -8,6 +8,6 @@
         mc:Ignorable="d"
         Title="RezervuotiKrauja" Height="450" Width="800">
     <Grid>
-        <Button x:Name="Rezervuoti" Content="Rezervuoti" Width="200" Margin="0 0 0 0" Height="50" FontSize="20" Click="Rezervuoti_Click" />
+        <Button x:Name="Rezervuoti" Content="Rezervuoti" Width="200" Margin="0 0 0 0" Height="50" FontSize="20" Click="Rezervuoti_Click" Background="White" Foreground="Red" FontWeight="Bold" BorderBrush="Black"/>
     </Grid>
 </Window>

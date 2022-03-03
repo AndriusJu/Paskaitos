@@ -1,18 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using Duomenys_Library;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using VartotojuDuomenys;
 
 namespace Kraujo_Bankas
 {
@@ -24,95 +14,118 @@ namespace Kraujo_Bankas
         public Registruotis()
         {
             InitializeComponent();
-
         }
         private void Toliau_Click(object sender, RoutedEventArgs e)
         {
-            RegistracijaDuomenys RegistracijosDuomenys = new RegistracijaDuomenys(RegistracijosVardas.Text, RegistracijosSlaptazodis.Text, RegistracijosSlaptazodis2.Text, Vardas.Text, Pavarde.Text, Miestas.Text, Telefononumeris.Text, Elpastas.Text, GimimoData.Text);
+            try
+         {
+                Duomenys RegistracijosDuomenys = new Duomenys(RegistracijosVardas.Text, RegistracijosSlaptazodis.Text, RegistracijosSlaptazodis2.Text, Vardas.Text, Pavarde.Text, Miestas.Text, Telefononumeris.Text, Elpastas.Text, GimimoData.Text);
 
-            if (RegistracijosDuomenys.vardas() != "001")
-            {
-                MessageBox.Show(RegistracijosDuomenys.vardas());
-                RegistracijosVardas.Clear();
-            }
+                bool Atsakymas3 = Laukeliai.Children.OfType<TextBox>().Any(x => x.Text.Length != 0);
+                bool Atsakymas1 = Lyties_Laukelis.Children.OfType<RadioButton>().Where(x => x.IsChecked == true).Any();
+               
+                if (!Atsakymas3 && !Atsakymas1)
+                {
+                    MessageBox.Show("Užpildykite visus laukelius");
+                }
+                else if (Atsakymas3 || Atsakymas1)
+                {
+                    if (RegistracijosDuomenys.NameRegistracijaTikrinimas() == "002"){}
+                    else if (RegistracijosDuomenys.NameRegistracijaTikrinimas() != "001")
+                    {
+                        MessageBox.Show(RegistracijosDuomenys.NameRegistracijaTikrinimas());
+                        RegistracijosVardas.Clear();
+                    }
 
-            if (RegistracijosDuomenys.slaptazodis() != "001")
-            {
-                MessageBox.Show(RegistracijosDuomenys.slaptazodis());
-                RegistracijosSlaptazodis.Clear();
-                RegistracijosSlaptazodis2.Clear();
-            }
+                    if (RegistracijosDuomenys.SlaptazodisTikrinimas() == "002") { }
+                    else if (RegistracijosDuomenys.SlaptazodisTikrinimas() != "001")
+                    {
+                        MessageBox.Show(RegistracijosDuomenys.SlaptazodisTikrinimas());
+                        RegistracijosSlaptazodis.Clear();
+                        RegistracijosSlaptazodis2.Clear();
+                    }
 
-            if (RegistracijosDuomenys.Vardui() != "001")
-            {
-                MessageBox.Show(RegistracijosDuomenys.Vardui());
-                Vardas.Clear();
-            }
+                    if (RegistracijosDuomenys.VardasTikrinimas() == "002") { }
+                    else if (RegistracijosDuomenys.VardasTikrinimas() != "001")
+                    {
+                        MessageBox.Show(RegistracijosDuomenys.VardasTikrinimas());
+                        Vardas.Clear();
+                    }
 
-            if (RegistracijosDuomenys.pavarde() != "001")
-            {
-                MessageBox.Show(RegistracijosDuomenys.pavarde());
-                Pavarde.Clear();
-            }
+                    if (RegistracijosDuomenys.PavardeTikrinimas() == "002") { }
+                    else if (RegistracijosDuomenys.PavardeTikrinimas() != "001")
+                    {
+                        MessageBox.Show(RegistracijosDuomenys.PavardeTikrinimas());
+                        Pavarde.Clear();
+                    }
 
-            if (RegistracijosDuomenys.miestas() != "001")
-            {
-                MessageBox.Show(RegistracijosDuomenys.miestas());
-                Miestas.Clear();
-            }
-            
+                    if (RegistracijosDuomenys.MiestasTikrinimas() == "002") { }
+                    else if (RegistracijosDuomenys.MiestasTikrinimas() != "001")
+                    {
+                        MessageBox.Show(RegistracijosDuomenys.MiestasTikrinimas());
+                        Miestas.Clear();
+                    }
 
-            if (RegistracijosDuomenys.telefononumeris() != "001")
-            {
-                MessageBox.Show(RegistracijosDuomenys.telefononumeris());
-                Telefononumeris.Clear();
-            }
+                    if (RegistracijosDuomenys.TelefonoNumerisTikrinimas() != "001")
+                    {
+                        MessageBox.Show(RegistracijosDuomenys.TelefonoNumerisTikrinimas());
+                        Telefononumeris.Clear();
+                    }
 
-            if (RegistracijosDuomenys.elpastas() != "001")
-            {
-                MessageBox.Show(RegistracijosDuomenys.elpastas());
-                Elpastas.Clear();
-            }
+                    if (RegistracijosDuomenys.ElpastasTikrinimas() == "002") { }
+                    else if (RegistracijosDuomenys.ElpastasTikrinimas() != "001")
+                    {
+                        MessageBox.Show(RegistracijosDuomenys.ElpastasTikrinimas());
+                        Elpastas.Clear();
+                    }
 
-            if (RegistracijosDuomenys.gimimodata() != "001")
-            {
-                MessageBox.Show(RegistracijosDuomenys.gimimodata());
-                GimimoData.Clear();
-            }
+                    if (RegistracijosDuomenys.GimimoDataTikrinimas() != "001")
+                    {
+                        MessageBox.Show(RegistracijosDuomenys.GimimoDataTikrinimas());
+                        GimimoData.Clear();
+                    }
 
-            if (Vyras.IsChecked == true)
-            {
-                RegistracijosDuomenys.Lytis = "Vyras";
-            }
-            else if (Moteris.IsChecked == true)
-            {
-                RegistracijosDuomenys.Lytis = "Moteris";
-            }
-            else
-            {
-                MessageBox.Show("Pasirinkite vyras ar moteris");
-            }
+                    if (Vyras.IsChecked == true)
+                    {
+                        Duomenys.Lytis = "Vyras";
+                    }
+                    else if (Moteris.IsChecked == true)
+                    {
+                        Duomenys.Lytis = "Moteris";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Pasirinkite vyras ar moteris");
+                    }
+                    bool Atsakymas = Laukeliai.Children.OfType<TextBox>().All(x => x.Text.Length != 0);
+                    
+                    if (Atsakymas && Atsakymas1)
+                    {
+                        KuriKraujoGrupe kurikraujogrupe = new KuriKraujoGrupe();
+                        kurikraujogrupe.ShowDialog();
 
-          // KuriKraujoGrupe kurikraujogrupe = new KuriKraujoGrupe();
-          // kurikraujogrupe.ShowDialog();
-          //
-          // if (RegistracijosDuomenys.Registruotis() != "001")
-          // {
-          //     MessageBox.Show(RegistracijosDuomenys.Registruotis());
-          //     
-          // }
-          // else
-          // {
-                Pasirinkimas pasirinkimas = new Pasirinkimas();
-                pasirinkimas.Show();
-                Close();
-         //   }
+                        if (Saugoti_duomenis.KraujoGrupe != null)
+                        {
+                            Duomenys.Registracija();
+                            Pasirinkimas pasirinkimas = new Pasirinkimas();
+                            pasirinkimas.Show();
+                            Close();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Įvyko kalida !" + ex.Message);
+            }
         }
-
-        private void RegistracijosSlaptazodis_TextChanged(object sender, TextChangedEventArgs e)
+        private void RegistracijosSlaptazodis2_TextChanged(object sender, TextChangedEventArgs e)
         {
+            //Nezianu kaip padaryt kad palauktu kol antra karta ives slaptazodi
             
         }
-    }
+      }
 }    
   
+
+       

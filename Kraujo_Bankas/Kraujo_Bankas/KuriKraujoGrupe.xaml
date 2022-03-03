@@ -6,31 +6,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kraujo_Bankas"
         mc:Ignorable="d"
-        Title="KuriKraujoGrupe" Height="450" Width="800">
+        Title="KuriKraujoGrupe" Height="450" Width="800" Background="Red">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100" />
+            <RowDefinition Height="120" />
             <RowDefinition Height="80" />
             <RowDefinition Height="80" />
          </Grid.RowDefinitions>
-        <GroupBox Grid.Row="0" >
-            <StackPanel Orientation="Vertical" >
-                <Label Content="Pasirinkite kraujo grupe" />
-                <RadioButton x:Name="O" Content="O" />
-                <RadioButton x:Name="A" Content="A" />
-                <RadioButton x:Name="B" Content="B" />
-                <RadioButton x:Name="AB" Content="AB" />
+        <GroupBox Grid.Row="0" BorderThickness="0" >
+            <StackPanel Orientation="Vertical" x:Name="Pirmas" >
+                <Label Content="Pasirinkite kraujo grupe"  FontSize="15" Foreground="White" />
+                <RadioButton x:Name="O" Content="O" FontSize="15" Foreground="White"/>
+                <RadioButton x:Name="A" Content="A" FontSize="15" Foreground="White"/>
+                <RadioButton x:Name="B" Content="B" FontSize="15" Foreground="White"/>
+                <RadioButton x:Name="AB" Content="AB" FontSize="15" Foreground="White"/>
             </StackPanel>
         </GroupBox>
-        <GroupBox Grid.Row="1" >
-            <StackPanel Orientation="Vertical">
-                <Label Content="Teigiama ar ne ?" />
-                <RadioButton x:Name="Teigiama" Content="+" />
-                <RadioButton x:Name="Neigiama" Content="-" />
+        <GroupBox Grid.Row="1" BorderThickness="0"  >
+            <StackPanel Orientation="Vertical" x:Name="Antras">
+                <Label Content="Teigiama ar ne ?" FontSize="15" Foreground="White"/>
+                <RadioButton x:Name="Teigiama" Content="+" FontSize="15" Foreground="White"/>
+                <RadioButton x:Name="Neigiama" Content="-" FontSize="15" Foreground="White"/>
             </StackPanel>
         </GroupBox>
-        <StackPanel Grid.Row="3" > 
-        <Button x:Name="Toliau" Content="Toliau" Margin="0 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="100" Height="30" Click="KuriKraujo_Click" />
+        <StackPanel Grid.Row="3" >
+            <Button x:Name="Toliau" Content="Toliau" Margin="0 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="100" Height="30" Click="KuriKraujo_Click" Background="White" Foreground="Red" FontSize="20" FontWeight="Bold" BorderBrush="Black"/>
         </StackPanel>
     </Grid>
 </Window>

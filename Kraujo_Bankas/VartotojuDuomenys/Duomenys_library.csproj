@@ -41,9 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ManoEnum.cs" />
-    <Compile Include="Prisijungti.cs" />
-    <Compile Include="RegistracijaDuomenys.cs" />
+    <Compile Include="NuskaitytiDuomenisIsFailo.cs" />
+    <Compile Include="Duomenys.cs" />
     <Compile Include="Saugoti_duomenis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

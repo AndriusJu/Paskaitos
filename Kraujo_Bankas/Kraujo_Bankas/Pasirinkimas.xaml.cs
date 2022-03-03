@@ -30,17 +30,14 @@ namespace Kraujo_Bankas
             Aukoti.Show();
             Close();
         }
-
         private void RezervuotiKrauja_Click(object sender, RoutedEventArgs e)
         {
             RezervuotiKrauja Rezervuoti = new RezervuotiKrauja();
             Rezervuoti.Show();
             Close();
         }
-
         private void IeskotiKraujo_Click(object sender, RoutedEventArgs e)
-        {
-            
+        { 
             IeskotiKraujo Ieskoti = new IeskotiKraujo();
             Ieskoti.Show();
             Close();

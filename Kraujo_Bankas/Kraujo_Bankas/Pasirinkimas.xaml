@@ -8,9 +8,10 @@
         mc:Ignorable="d"
         Title="Pasirinkimas" Height="450" Width="800">
     <Grid>
-            <TextBlock Text="Pasirinkite ką norite daryti" FontSize="20" Margin="0 -300 0 0"  Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" />
-            <Button x:Name="AukotiKrauja" Content="Aukoti Krauja" Margin="0 -200 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="AukotiKrauja_Click"/>
-            <Button x:Name="RezervuotiKrauja" Content="Rezervuoti Krauja" Margin="0 0 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="RezervuotiKrauja_Click"/>
-            <Button x:Name="IeskotiKraujo" Content="Ieškoti Kraujo" Margin="0 200 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="IeskotiKraujo_Click"/>
+        <Image HorizontalAlignment="Left" Margin="0 100 100 100" Source="C:\Users\Meile\source\Paskaitos\Kraujo_Bankas\Pasirinkimas.png" />
+        <TextBlock Text="Pasirinkite ką norite daryti" FontSize="20" Margin="0 -300 0 0"  Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" Foreground="Red" FontWeight="Bold"/>
+        <Button x:Name="AukotiKrauja" Content="Aukoti Krauja" Margin="0 -200 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="AukotiKrauja_Click" Background="White" Foreground="Red" FontSize="20" FontWeight="Bold" BorderBrush="Black"/>
+        <Button x:Name="RezervuotiKrauja" Content="Rezervuoti Krauja" Margin="0 0 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="RezervuotiKrauja_Click" Background="White" Foreground="Red" FontSize="20" FontWeight="Bold" BorderBrush="Black"/>
+        <Button x:Name="IeskotiKraujo" Content="Ieškoti Kraujo" Margin="0 200 0 0" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Click="IeskotiKraujo_Click" Background="White" Foreground="Red" FontSize="20" FontWeight="Bold" BorderBrush="Black"/>
      </Grid>
 </Window>

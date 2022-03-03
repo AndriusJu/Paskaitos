@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using VartotojuDuomenys;
+using Duomenys_Library;
 
 namespace Kraujo_Bankas
 {
@@ -22,33 +22,24 @@ namespace Kraujo_Bankas
     {
         public Prisijungimas()
         {
-            InitializeComponent();
-           
+            InitializeComponent();            
         }
-
         private void Prisijungti_Click(object sender, RoutedEventArgs e)
         {
-            Prisijungti PrisijungiDuomenys = new Prisijungti(Vardas.Text, Spaltazodis.Password);
+            Duomenys PrisijungiDuomenys = new Duomenys(Vardas.Text, Spaltazodis.Password);
             
-            if (!PrisijungiDuomenys.Atsakymas())
+            if (!PrisijungiDuomenys.Prisijungimas())
             {
-
-                // Eilute.Text = "Blogi prisijungimo duomenys";
                 MessageBox.Show("Blogi prisijungimo duomenys");
                 Vardas.Clear();
                 Spaltazodis.Clear();
             }
             else
             {
-
                 Pasirinkimas pasirinkimas = new Pasirinkimas();
                 pasirinkimas.Show();
                 Close();
-
             }
-
         }
     }   
-
-    
 }
